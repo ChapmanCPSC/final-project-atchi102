@@ -65,10 +65,8 @@ class AnswerViewController: UIViewController {
     {
         let navVC = storyboard!.instantiateViewControllerWithIdentifier("category_viewNC") as! UINavigationController
         
-        let CatVC = navVC.viewControllers[0] as! QuestionViewController
-        CatVC.CategoryNum = CategoryNum
+        let CatVC = navVC.viewControllers[0] as! CategoryViewController
         CatVC.Game = Game
-        CatVC.ValueNum = ValueNum
         
         
         self.presentViewController(navVC, animated: true, completion: nil)

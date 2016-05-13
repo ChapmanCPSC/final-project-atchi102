@@ -30,9 +30,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         if(Game?.TwoPlayer == false)
         {
             Player2Score.hidden = true
+            Player1Score.text = "Score: " + ((Game?.Player1Score)! as NSNumber).stringValue
         }
         else
         {
+            Player1Score.text = "Score: " + ((Game?.Player1Score)! as NSNumber).stringValue
+            Player2Score.text = "Score: " + ((Game?.Player2Score)! as NSNumber).stringValue
             userDefaults.setBool(!(userDefaults.boolForKey("PlayerTurn")), forKey: "PlayerTurn")
         }
         

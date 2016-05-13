@@ -45,7 +45,7 @@ class QuestionViewController: UIViewController{
     @IBAction func AnswerClicked(sender: AnyObject) {
         let navVC = storyboard!.instantiateViewControllerWithIdentifier("answer_viewNC") as! UINavigationController
         
-        let AVC = navVC.viewControllers[0] as! QuestionViewController
+        let AVC = navVC.viewControllers[0] as! AnswerViewController
         AVC.CategoryNum = CategoryNum
         AVC.Game = Game
         AVC.ValueNum = ValueNum
