@@ -12,6 +12,11 @@
 		E4E567801CE2F7C600617E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E5677E1CE2F7C600617E39 /* Main.storyboard */; };
 		E4E567821CE2F7C600617E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E567811CE2F7C600617E39 /* Assets.xcassets */; };
 		E4E567851CE2F7C600617E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E567831CE2F7C600617E39 /* LaunchScreen.storyboard */; };
+		E4E5678D1CE3FD3D00617E39 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5678C1CE3FD3D00617E39 /* CategoryViewController.swift */; };
+		E4E5678F1CE420AA00617E39 /* ValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E5678E1CE420AA00617E39 /* ValueViewController.swift */; };
+		E4E567911CE4212A00617E39 /* JeopardyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E567901CE4212A00617E39 /* JeopardyGame.swift */; };
+		E4E567971CE465D300617E39 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E567961CE465D300617E39 /* QuestionViewController.swift */; };
+		E4E567991CE5289300617E39 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E567981CE5289300617E39 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		E4E567811CE2F7C600617E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E567841CE2F7C600617E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4E567861CE2F7C600617E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E5678C1CE3FD3D00617E39 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		E4E5678E1CE420AA00617E39 /* ValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueViewController.swift; sourceTree = "<group>"; };
+		E4E567901CE4212A00617E39 /* JeopardyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeopardyGame.swift; sourceTree = "<group>"; };
+		E4E567961CE465D300617E39 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		E4E567981CE5289300617E39 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				E4E5677A1CE2F7C600617E39 /* AppDelegate.swift */,
 				E4E5677C1CE2F7C600617E39 /* ViewController.swift */,
+				E4E5678C1CE3FD3D00617E39 /* CategoryViewController.swift */,
+				E4E5678E1CE420AA00617E39 /* ValueViewController.swift */,
+				E4E567961CE465D300617E39 /* QuestionViewController.swift */,
+				E4E567981CE5289300617E39 /* AnswerViewController.swift */,
+				E4E567901CE4212A00617E39 /* JeopardyGame.swift */,
 				E4E5677E1CE2F7C600617E39 /* Main.storyboard */,
 				E4E567811CE2F7C600617E39 /* Assets.xcassets */,
 				E4E567831CE2F7C600617E39 /* LaunchScreen.storyboard */,
@@ -136,7 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E5678F1CE420AA00617E39 /* ValueViewController.swift in Sources */,
+				E4E567991CE5289300617E39 /* AnswerViewController.swift in Sources */,
 				E4E5677D1CE2F7C600617E39 /* ViewController.swift in Sources */,
+				E4E567971CE465D300617E39 /* QuestionViewController.swift in Sources */,
+				E4E567911CE4212A00617E39 /* JeopardyGame.swift in Sources */,
+				E4E5678D1CE3FD3D00617E39 /* CategoryViewController.swift in Sources */,
 				E4E5677B1CE2F7C600617E39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
