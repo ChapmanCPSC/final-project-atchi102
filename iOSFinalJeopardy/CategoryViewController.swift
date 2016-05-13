@@ -12,6 +12,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var Game : JeopardyGame?
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    @IBOutlet var categoryTableView: UITableView!
+    @IBOutlet var Player1Score: UILabel!
+    @IBOutlet var Player2Score: UILabel!
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,17 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         self.categoryTableView.dataSource = self
         self.categoryTableView.delegate = self
         
+        if(Game?.TwoPlayer == false)
+        {
+            Player2Score.hidden = true
+        }
+        else
+        {
+            userDefaults.setBool(!(userDefaults.boolForKey("PlayerTurn")), forKey: "PlayerTurn")
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +45,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet var categoryTableView: UITableView!
+    
     
 //    
 //    @IBAction func SettingsClicked(sender: AnyObject) {

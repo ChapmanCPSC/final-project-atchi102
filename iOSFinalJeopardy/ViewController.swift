@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     
     func test()
     {
+        
+        
         testGame = JeopardyGame(name: "test", twoPlayer: false)
         
         var testArray = ["cat1","cat2","cat3","cat4","cat5"]
@@ -63,6 +65,9 @@ class ViewController: UIViewController {
         testArray = ["A101","A102","A103","A104","A105"]
         testGame!.A1000 = testArray
         
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        userDefaults.setBool(true, forKey: "PlayerTurn")
     }
 
 }

@@ -15,6 +15,8 @@ class AnswerViewController: UIViewController {
     var ValueNum : Int?
     var timerExpired : Bool?
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet var AnswerLabel: UILabel!
     @IBOutlet var ValueLabel: UILabel!
     @IBOutlet var IncorrectButton: UIButton!
@@ -24,23 +26,52 @@ class AnswerViewController: UIViewController {
     @IBAction func CorrectClicked(sender: AnyObject) {
         if(Game?.TwoPlayer == true)
         {
-            
+            if(userDefaults.boolForKey("PlayerTurn"))
+            {
+                Game?.Player1Score += (ValueNum! * 200)+200
+            }
+            else
+            {
+                Game?.Player2Score += (ValueNum! * 200)+200
+            }
         }
         else
         {
             Game?.Player1Score += (ValueNum! * 200)+200
         }
+        NavigatetoCategories()
     }
     
     @IBAction func IncorrectClicked(sender: AnyObject) {
         if(Game?.TwoPlayer == true)
         {
-            
+            if(userDefaults.boolForKey("PlayerTurn"))
+            {
+                Game?.Player1Score -= (ValueNum! * 200)+200
+            }
+            else
+            {
+                Game?.Player2Score -= (ValueNum! * 200)+200
+            }
         }
         else
         {
-            Game?.Player1Score += (ValueNum! * 200)+200
+            Game?.Player1Score -= (ValueNum! * 200)+200
         }
+        NavigatetoCategories()
+    }
+    
+    func NavigatetoCategories()
+    {
+        let navVC = storyboard!.instantiateViewControllerWithIdentifier("category_viewNC") as! UINavigationController
+        
+        let CatVC = navVC.viewControllers[0] as! QuestionViewController
+        CatVC.CategoryNum = CategoryNum
+        CatVC.Game = Game
+        CatVC.ValueNum = ValueNum
+        
+        
+        self.presentViewController(navVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
