@@ -80,21 +80,54 @@ class AnswerViewController: UIViewController {
         
         switch ((ValueNum! * 200)+200){
         case 200:
-            AnswerLabel.text = Game?.A200?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 1)
         case 400:
-            AnswerLabel.text = Game?.A400?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 2)
         case 600:
-            AnswerLabel.text = Game?.A600?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 3)
         case 800:
-            AnswerLabel.text = Game?.A800?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 4)
         case 1000:
-            AnswerLabel.text = Game?.A1000?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 0)
         default:
             AnswerLabel.text = "Question not found"
             
         }
         
+        
+        
+        
     }
+    
+    func addAnswer(Cat : Int, _ index : Int)
+    {
+        if(Cat == 1)
+        {
+            AnswerLabel.text = Game?.Cat1A?[index]
+        }
+        else if(Cat == 2)
+        {
+            AnswerLabel.text = Game?.Cat2A?[index]
+        }
+        else if(Cat == 3)
+        {
+            AnswerLabel.text = Game?.Cat3A?[index]
+        }
+        else if(Cat == 4)
+        {
+            AnswerLabel.text = Game?.Cat4A?[index]
+        }
+        else if(Cat == 5)
+        {
+            AnswerLabel.text = Game?.Cat5A?[index]
+        }
+        else
+        {
+            AnswerLabel.text = "Answer Not Found"
+        }
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -26,21 +26,53 @@ class QuestionViewController: UIViewController{
         
         switch ((ValueNum! * 200)+200){
         case 200:
-            QuestionLabel.text = Game?.Q200?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 1)
         case 400:
-            QuestionLabel.text = Game?.Q400?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 2)
         case 600:
-            QuestionLabel.text = Game?.Q600?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 3)
         case 800:
-            QuestionLabel.text = Game?.Q800?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 4)
         case 1000:
-            QuestionLabel.text = Game?.Q1000?[(CategoryNum)!]
+            addAnswer(CategoryNum! + 1, 0)
         default:
             QuestionLabel.text = "Question not found"
             
         }
         
+        
+        
+        
     }
+    
+    func addAnswer(Cat : Int, _ index : Int)
+    {
+        if(Cat == 1)
+        {
+            QuestionLabel.text = Game?.Cat1Q?[index]
+        }
+        else if(Cat == 2)
+        {
+            QuestionLabel.text = Game?.Cat2Q?[index]
+        }
+        else if(Cat == 3)
+        {
+            QuestionLabel.text = Game?.Cat3Q?[index]
+        }
+        else if(Cat == 4)
+        {
+            QuestionLabel.text = Game?.Cat4Q?[index]
+        }
+        else if(Cat == 5)
+        {
+            QuestionLabel.text = Game?.Cat5Q?[index]
+        }
+        else
+        {
+            QuestionLabel.text = "Answer Not Found"
+        }
+    }
+
     
     @IBAction func AnswerClicked(sender: AnyObject) {
         let navVC = storyboard!.instantiateViewControllerWithIdentifier("answer_viewNC") as! UINavigationController

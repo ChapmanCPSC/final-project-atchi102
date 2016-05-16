@@ -12,16 +12,16 @@ class JeopardyGame{
     
     var GameName: String
     var Categories: [String]?
-    var Q200: [String]?
-    var Q400: [String]?
-    var Q600: [String]?
-    var Q800: [String]?
-    var Q1000: [String]?
-    var A200: [String]?
-    var A400: [String]?
-    var A600: [String]?
-    var A800: [String]?
-    var A1000: [String]?
+    var Cat1Q: [String]?
+    var Cat2Q: [String]?
+    var Cat3Q: [String]?
+    var Cat4Q: [String]?
+    var Cat5Q: [String]?
+    var Cat1A: [String]?
+    var Cat2A: [String]?
+    var Cat3A: [String]?
+    var Cat4A: [String]?
+    var Cat5A: [String]?
     var TwoPlayer : Bool
     var Player1Score : Int
     var Player2Score : Int
@@ -32,6 +32,18 @@ class JeopardyGame{
         TwoPlayer = twoPlayer
         Player1Score = 0
         Player2Score = 0
+        
+        Categories = ["","","","",""]
+        Cat1Q = ["","","","",""]
+        Cat1A = ["","","","",""]
+        Cat2Q = ["","","","",""]
+        Cat2A = ["","","","",""]
+        Cat3Q = ["","","","",""]
+        Cat3A = ["","","","",""]
+        Cat4Q = ["","","","",""]
+        Cat4A = ["","","","",""]
+        Cat5Q = ["","","","",""]
+        Cat5A = ["","","","",""]
     }
     
     

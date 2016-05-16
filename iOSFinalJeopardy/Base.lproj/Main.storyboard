@@ -26,9 +26,9 @@
                                     <constraint firstAttribute="width" constant="105" id="d3c-jG-15O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                <state key="normal" title="Let's Play!"/>
+                                <state key="normal" title="One Player"/>
                                 <connections>
-                                    <action selector="StartClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fL-1B-S0e"/>
+                                    <action selector="OnePlayerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSg-PA-ckM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Jeopardy! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sC2-mP-ex0">
@@ -41,17 +41,35 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCY-eX-hdL">
+                                <rect key="frame" x="248" y="399" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6qb-QG-Ilf"/>
+                                    <constraint firstAttribute="width" constant="105" id="euj-Qd-mOR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <state key="normal" title="Two Player"/>
+                                <connections>
+                                    <action selector="TwoPlayerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCd-d5-WJh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sC2-mP-ex0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="2wc-wK-qtq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UsV-rU-WEz" secondAttribute="bottom" constant="209" id="SLk-b3-wiL"/>
+                            <constraint firstItem="hCY-eX-hdL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqp-lt-0Un"/>
+                            <constraint firstItem="hCY-eX-hdL" firstAttribute="top" secondItem="UsV-rU-WEz" secondAttribute="bottom" constant="8" id="nev-oZ-EMS"/>
                             <constraint firstItem="sC2-mP-ex0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qcf-j3-tF5"/>
                             <constraint firstItem="UsV-rU-WEz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tBB-gk-gAs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6a8-bo-3ig">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="jva-uZ-cor"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="jva-uZ-cor">
+                            <connections>
+                                <action selector="SettingsClicked:" destination="BYZ-38-t0r" id="2Lr-qi-axo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
