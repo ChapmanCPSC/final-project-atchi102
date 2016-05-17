@@ -17,7 +17,7 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        valueTableView.tableFooterView = UIView()
         self.valueTableView.dataSource = self
         self.valueTableView.delegate = self
         

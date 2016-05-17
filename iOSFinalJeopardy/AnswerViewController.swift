@@ -76,6 +76,12 @@ class AnswerViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        if(timerExpired!)
+        {
+            CorrectButton.userInteractionEnabled = false
+            CorrectButton.hidden = true
+        }
+        
         ValueLabel.text = ((ValueNum! * 200)+200 as NSNumber).stringValue
         
         switch ((ValueNum! * 200)+200){

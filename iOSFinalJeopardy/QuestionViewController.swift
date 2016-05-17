@@ -13,6 +13,8 @@ class QuestionViewController: UIViewController{
     var Game : JeopardyGame?
     var CategoryNum : Int?
     var ValueNum : Int?
+    var second = 30
+    var timerExpired = false
     
     @IBOutlet var QuestionLabel: UILabel!
     @IBOutlet var ValueNumber: UILabel!
@@ -21,7 +23,9 @@ class QuestionViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         ValueNumber.text = ((ValueNum! * 200)+200 as NSNumber).stringValue
+        
         
         
         switch ((ValueNum! * 200)+200){
@@ -42,6 +46,29 @@ class QuestionViewController: UIViewController{
         
         
         
+        
+    }
+    
+    func update()
+    {
+        second--;
+        if(second == 0)
+        {
+            timerExpired = true
+            AnswerClicked(TimerLabel)
+        }
+        else
+        {
+            if(second < 10)
+            {
+                TimerLabel.text = "00:0\(second)"
+            }
+            else
+            {
+                TimerLabel.text = "00:\(second)"
+            }
+            
+        }
         
     }
     
@@ -81,6 +108,7 @@ class QuestionViewController: UIViewController{
         AVC.CategoryNum = CategoryNum
         AVC.Game = Game
         AVC.ValueNum = ValueNum
+        AVC.timerExpired = timerExpired
         
         
         self.presentViewController(navVC, animated: true, completion: nil)

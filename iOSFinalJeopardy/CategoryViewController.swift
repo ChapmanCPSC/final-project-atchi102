@@ -19,15 +19,40 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var Player2Score: UILabel!
 
     
+    @IBOutlet var GameOverLabel: UILabel!
     
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        categoryTableView.tableFooterView = UIView()
         if(Game!.numPushed == 25)
         {
-            //gameOver
+            if(Game?.TwoPlayer == true)
+            {
+                if(Game?.Player1Score>Game?.Player2Score)
+                {
+                    GameOverLabel.text = "Game Over! Player 1 Wins"
+                }
+                else if(Game?.Player1Score<Game?.Player2Score)
+                {
+                    GameOverLabel.text = "Game Over! Player 2 Wins"
+                }
+                else
+                {
+                    GameOverLabel.text = "Game Over! You tied!"
+                }
+            }
+            else
+            {
+                GameOverLabel.text = "Game Over!"
+            }
+            
+        }
+        else
+        {
+            GameOverLabel.text = ""
         }
         self.categoryTableView.dataSource = self
         self.categoryTableView.delegate = self
