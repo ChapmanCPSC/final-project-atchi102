@@ -25,7 +25,10 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        if(Game!.numPushed == 25)
+        {
+            //gameOver
+        }
         self.categoryTableView.dataSource = self
         self.categoryTableView.delegate = self
         
@@ -58,6 +61,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 //        self.presentViewController(tutorialVC, animated: true, completion: nil)
 //    }
 
+    @IBAction func onBackPressed(sender: AnyObject) {
+        
+        let navVC = storyboard!.instantiateViewControllerWithIdentifier("main_view") as! UINavigationController
+        
+        self.presentViewController(navVC, animated: true, completion: nil)
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.Game?.Categories?.count)!
@@ -67,6 +76,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let cell = UITableViewCell()
         cell.textLabel!.text = self.Game?.Categories?[indexPath.row]
+        
+        if(Game!.numPushed == 25)
+        {
+            cell.userInteractionEnabled = false
+            cell.textLabel?.textColor = UIColor .grayColor()
+        }
 
         
         return cell

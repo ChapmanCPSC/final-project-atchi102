@@ -18,11 +18,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //let urlName = userDefaults.stringForKey("GameName")
-        testGame = JeopardyGame(name: "test name", twoPlayer: false)
+        //let urlName = try? userDefaults.stringForKey("GameName")
+//        if(urlName! != nil)
+//        {
+//            testGame = JeopardyGame(name: urlName!!, twoPlayer: false)
+//        }
+//        else
+//        {
+            testGame = JeopardyGame(name: "test name", twoPlayer: false)
+//        }
         
         load()
-        //todo: implement one and two player option
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,8 +58,17 @@ class ViewController: UIViewController {
     
     func load()
     {
+        var url : String
+        if(userDefaults.boolForKey("urlStored"))
+        {
+            url = userDefaults.stringForKey("FireBaseURL")!
+        }
+        else
+        {
+            url = "https://iosfinaljeopardy.firebaseio.com/"
+        }
         
-        let ref = Firebase(url:"https://iosfinaljeopardy.firebaseio.com/")
+        let ref = Firebase(url:url)
         
         var index = 0
         ref.queryOrderedByChild("Number").observeEventType(.ChildAdded, withBlock: { snapshot in
@@ -72,38 +87,47 @@ class ViewController: UIViewController {
     }
     func loadInfo(CategoryNum : Int)
     {
-        //var url = userDefaults.stringForKey("FireBaseURL")
-        var url : String? = "https://iosfinaljeopardy.firebaseio.com/"
+        var url : String
+        if(userDefaults.boolForKey("urlStored"))
+        {
+            url = userDefaults.stringForKey("FireBaseURL")!
+        }
+        else
+        {
+            url = "https://iosfinaljeopardy.firebaseio.com/"
+        }
+        
+        
         
         if(CategoryNum == 0)
         {
-            url! += "Category1"
+            url += "Category1"
             
         }
         else if(CategoryNum == 1)
         {
-            url! += "Category2"
+            url += "Category2"
             
         }
         else if(CategoryNum == 2)
         {
-            url! += "Category3"
+            url += "Category3"
         }
         else if(CategoryNum == 3)
         {
-            url! += "Category4"
+            url += "Category4"
         }
         else if(CategoryNum == 4)
         {
-            url! += "Category5"
+            url += "Category5"
         }
         else
         {
             //Incorrect input
         }
         
-        Answers((url! + "/Answers"), num: CategoryNum)
-        Questions((url! + "/Questions"), num: CategoryNum)
+        Answers((url + "/Answers"), num: CategoryNum)
+        Questions((url + "/Questions"), num: CategoryNum)
     }
     
     func Answers(url : String, num : Int)

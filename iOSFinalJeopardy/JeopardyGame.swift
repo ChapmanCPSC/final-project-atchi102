@@ -26,6 +26,14 @@ class JeopardyGame{
     var Player1Score : Int
     var Player2Score : Int
     
+    var Cat1: [Bool]?
+    var Cat2: [Bool]?
+    var Cat3: [Bool]?
+    var Cat4: [Bool]?
+    var Cat5: [Bool]?
+    
+    var numPushed : Int
+    
     init(name: String, twoPlayer : Bool)
     {
         GameName = name
@@ -44,6 +52,14 @@ class JeopardyGame{
         Cat4A = ["","","","",""]
         Cat5Q = ["","","","",""]
         Cat5A = ["","","","",""]
+        
+        numPushed = 0
+        Cat1 = [false,false,false,false,false]
+        Cat2 = [false,false,false,false,false]
+        Cat3 = [false,false,false,false,false]
+        Cat4 = [false,false,false,false,false]
+        Cat5 = [false,false,false,false,false]
+        
     }
     
     

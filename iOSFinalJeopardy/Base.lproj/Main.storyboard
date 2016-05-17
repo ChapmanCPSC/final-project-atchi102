@@ -114,7 +114,13 @@
                             <constraint firstItem="ove-NE-QOo" firstAttribute="top" secondItem="1kt-hM-gfA" secondAttribute="bottom" id="r1R-sS-eHx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="a1b-HF-uPB"/>
+                    <navigationItem key="navigationItem" id="a1b-HF-uPB">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Qq9-Bv-Kxh">
+                            <connections>
+                                <action selector="onBackPressed:" destination="muC-xQ-aXt" id="fXN-Wn-fKd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="valueTableView" destination="1kt-hM-gfA" id="Vbe-7x-RzB"/>
                     </connections>
@@ -249,7 +255,13 @@
                             <constraint firstItem="cDO-J8-5ac" firstAttribute="top" secondItem="KMO-b0-r6j" secondAttribute="bottom" constant="8" id="vok-xS-7ta"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KU1-gJ-6Xg"/>
+                    <navigationItem key="navigationItem" id="KU1-gJ-6Xg">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="GOc-KJ-rCp">
+                            <connections>
+                                <action selector="onBackPressed:" destination="0ur-z3-iec" id="fEm-YC-HeU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Player1Score" destination="KMO-b0-r6j" id="v7s-nk-JR1"/>
                         <outlet property="Player2Score" destination="cDO-J8-5ac" id="Is7-R3-akD"/>
@@ -263,7 +275,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YxD-uo-Ss2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9M-62-Nvu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="main_view" automaticallyAdjustsScrollViewInsets="NO" id="f9M-62-Nvu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CTP-Fa-dzn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -277,6 +289,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="civ-f9-Mu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="319"/>
+        </scene>
+        <!--Url View Controller-->
+        <scene sceneID="4BE-qa-kIL">
+            <objects>
+                <viewController storyboardIdentifier="url_view" id="Ta8-R7-SVC" customClass="UrlViewController" customModule="iOSFinalJeopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9I-l6-tmG"/>
+                        <viewControllerLayoutGuide type="bottom" id="1CE-jj-Tp8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zno-95-40U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-2s-pev">
+                                <rect key="frame" x="177" y="208" width="246" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-sI-3sb">
+                                <rect key="frame" x="177" y="319" width="246" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firebase URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-3v-7Ui">
+                                <rect key="frame" x="177" y="179" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Name (Optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-5p-sef">
+                                <rect key="frame" x="97" y="290" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAp-ua-TIz">
+                                <rect key="frame" x="266" y="439" width="68" height="30"/>
+                                <state key="normal" title="Input URL"/>
+                                <connections>
+                                    <action selector="InputClicked:" destination="Ta8-R7-SVC" eventType="touchUpInside" id="aOP-Lv-3Ey"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="GameName" destination="G4T-sI-3sb" id="HkC-tD-7qR"/>
+                        <outlet property="URLLink" destination="bQo-2s-pev" id="mgj-IE-cTh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYx-Eq-k6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dWm-kq-ZDT">

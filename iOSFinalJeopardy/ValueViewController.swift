@@ -21,11 +21,22 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.valueTableView.dataSource = self
         self.valueTableView.delegate = self
         
+       
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func onBackPressed(sender: AnyObject) {
+        let navVC = storyboard!.instantiateViewControllerWithIdentifier("category_viewNC") as! UINavigationController
+        
+        let NVC = navVC.viewControllers[0] as! CategoryViewController
+        NVC.Game = Game
+            
+        self.presentViewController(navVC, animated: true, completion: nil)
+
     }
     
     @IBOutlet var valueTableView: UITableView!
@@ -41,17 +52,25 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 5
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
         let value = (indexPath.row * 200) + 200
         cell.textLabel!.text = (value as NSNumber).stringValue
         
+        if(isUsed(CategoryNum!,num: indexPath.row))
+        {
+            cell.userInteractionEnabled = false
+            cell.textLabel?.textColor = UIColor .grayColor()
+        }
+        
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         
         let navVC = storyboard!.instantiateViewControllerWithIdentifier("question_viewNC") as! UINavigationController
         
@@ -60,8 +79,99 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
         QVC.Game = Game
         QVC.ValueNum = indexPath.row
         
+        setUsed(CategoryNum!, num: indexPath.row)
+        
         
         self.presentViewController(navVC, animated: true, completion: nil)
+    }
+    
+    func isUsed(cat : Int, num : Int) -> Bool
+    {
+        if(cat == 0)
+        {
+            if(Game!.Cat1![num])
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+        else if(cat == 1)
+        {
+            if(Game!.Cat2![num])
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+        else if(cat == 2)
+        {
+            if(Game!.Cat3![num])
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+        else if(cat == 3)
+        {
+            if(Game!.Cat4![num])
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+        else if(cat == 4)
+        {
+            if(Game!.Cat5![num])
+            {
+                return true
+            }
+            else
+            {
+                return false
+            }
+        }
+        else
+        {
+            return false
+        }
+    }
+    
+    func setUsed(cat : Int, num : Int)
+    {
+        if(cat == 0)
+        {
+            Game!.Cat1![num] = !Game!.Cat1![num]
+        }
+        else if(cat == 1)
+        {
+            Game!.Cat2![num] = !Game!.Cat2![num]
+        }
+        else if(cat == 2)
+        {
+            Game!.Cat3![num] = !Game!.Cat3![num]
+        }
+        else if(cat == 3)
+        {
+            Game!.Cat4![num] = !Game!.Cat4![num]
+        }
+        else if(cat == 4)
+        {
+            Game!.Cat5![num] = !Game!.Cat5![num]
+        }
+        
+        Game!.numPushed += 1
     }
     
     
