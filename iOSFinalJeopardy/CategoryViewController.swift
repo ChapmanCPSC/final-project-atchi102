@@ -56,6 +56,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         self.categoryTableView.dataSource = self
         self.categoryTableView.delegate = self
+        self.categoryTableView.backgroundColor = UIColor.clearColor()
         
         if(Game?.TwoPlayer == false)
         {
@@ -71,6 +72,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         
+    }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {

@@ -21,12 +21,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsV-rU-WEz">
                                 <rect key="frame" x="248" y="361" width="105" height="30"/>
+                                <color key="backgroundColor" red="0.72549019607843135" green="0.82352941176470584" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AUk-4R-bz2"/>
                                     <constraint firstAttribute="width" constant="105" id="d3c-jG-15O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                <state key="normal" title="One Player"/>
+                                <state key="normal" title="One Player">
+                                    <color key="titleColor" red="0.20860125587660355" green="0.42830817388154074" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="OnePlayerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSg-PA-ckM"/>
                                 </connections>
@@ -38,23 +41,26 @@
                                     <constraint firstAttribute="height" constant="89" id="ytS-IM-7lV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="37"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.20860125587660355" green="0.42830817388154074" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCY-eX-hdL">
                                 <rect key="frame" x="248" y="399" width="105" height="30"/>
+                                <color key="backgroundColor" red="0.72549019607843135" green="0.82352941176470584" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6qb-QG-Ilf"/>
                                     <constraint firstAttribute="width" constant="105" id="euj-Qd-mOR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                <state key="normal" title="Two Player"/>
+                                <state key="normal" title="Two Player">
+                                    <color key="titleColor" red="0.20860125587660355" green="0.42830817388154074" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="TwoPlayerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCd-d5-WJh"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7686274509803922" green="0.8901960784313725" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sC2-mP-ex0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="2wc-wK-qtq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UsV-rU-WEz" secondAttribute="bottom" constant="209" id="SLk-b3-wiL"/>
@@ -91,6 +97,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kt-hM-gfA">
                                 <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.76862745099999996" green="0.89019607840000003" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.7686274509803922" green="0.8901960784313725" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-Oj-z20">
                                 <rect key="frame" x="205" y="131" width="190" height="21"/>
@@ -103,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45882352941176469" green="0.74901960784313726" blue="0.94117647058823528" alpha="0.82000000000000006" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1kt-hM-gfA" firstAttribute="centerX" secondItem="tyD-3l-TAP" secondAttribute="centerX" id="5Qp-qD-TtV"/>
                             <constraint firstItem="FMk-Oj-z20" firstAttribute="centerX" secondItem="tyD-3l-TAP" secondAttribute="centerX" id="6uZ-1o-702"/>
@@ -168,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jWc-lj-2ca" firstAttribute="top" secondItem="RLs-R5-Fqy" secondAttribute="bottom" id="7YP-20-yRK"/>
                             <constraint firstItem="Z1h-pr-Lrm" firstAttribute="centerX" secondItem="Srr-kQ-WDt" secondAttribute="centerX" id="Fsb-Cn-3EQ"/>
@@ -217,6 +225,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oag-Fy-Boc">
                                 <rect key="frame" x="0.0" y="187" width="600" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.76862745099999996" green="0.89019607840000003" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.76862745099999996" green="0.89019607840000003" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0ur-z3-iec" id="GtK-Cn-uzS"/>
                                     <outlet property="delegate" destination="0ur-z3-iec" id="0dU-PG-k3r"/>
@@ -253,7 +263,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.70588235294117652" green="0.84313725490196079" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hXc-OM-iRn" firstAttribute="centerX" secondItem="Qc7-k8-bL0" secondAttribute="centerX" id="0mh-wQ-IjC"/>
                             <constraint firstItem="oag-Fy-Boc" firstAttribute="leading" secondItem="Qc7-k8-bL0" secondAttribute="leadingMargin" constant="-20" id="1Zi-KI-6en"/>
@@ -359,7 +369,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.20000000000000001" blue="0.58431372549019611" alpha="0.38" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="G4T-sI-3sb" firstAttribute="centerX" secondItem="zno-95-40U" secondAttribute="centerX" id="26q-yc-6e8"/>
                             <constraint firstItem="bQo-2s-pev" firstAttribute="leading" secondItem="2YN-3v-7Ui" secondAttribute="leading" id="FfE-aE-SEw"/>
@@ -488,7 +498,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.54472106429418732" green="0.86422195298573978" blue="0.7914220400138775" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qhA-wF-WbC" firstAttribute="top" secondItem="L77-vj-ZEo" secondAttribute="bottom" constant="97" id="2GL-LR-Aq3"/>
                             <constraint firstItem="Cq3-m1-qKe" firstAttribute="top" secondItem="87d-dY-6iw" secondAttribute="bottom" id="6kJ-MN-TXp"/>

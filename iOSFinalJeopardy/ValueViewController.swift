@@ -20,6 +20,7 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
         valueTableView.tableFooterView = UIView()
         self.valueTableView.dataSource = self
         self.valueTableView.delegate = self
+        self.valueTableView.backgroundColor = UIColor.clearColor()
         
        
         
@@ -62,12 +63,17 @@ class ValueViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(isUsed(CategoryNum!,num: indexPath.row))
         {
             cell.userInteractionEnabled = false
-            cell.textLabel?.textColor = UIColor .grayColor()
+            cell.textLabel?.textColor = UIColor .lightGrayColor()
         }
         
         return cell
         
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
+
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
