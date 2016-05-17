@@ -88,20 +88,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-Oj-z20">
-                                <rect key="frame" x="240" y="131" width="121" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="0L0-qd-0Mm"/>
-                                    <constraint firstAttribute="width" constant="121" id="zyQ-gb-nsF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kt-hM-gfA">
                                 <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-Oj-z20">
+                                <rect key="frame" x="205" y="131" width="190" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0L0-qd-0Mm"/>
+                                    <constraint firstAttribute="width" constant="190" id="zyQ-gb-nsF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -141,22 +141,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leK-MU-mPm">
-                                <rect key="frame" x="284" y="240" width="33" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-pr-Lrm">
-                                <rect key="frame" x="275" y="400" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-pr-Lrm">
+                                <rect key="frame" x="254" y="419" width="93" height="37"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                 <state key="normal" title="Answer"/>
                                 <connections>
                                     <action selector="AnswerClicked:" destination="CeS-d0-1B4" eventType="touchUpInside" id="e5T-2N-2QK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWc-lj-2ca">
-                                <rect key="frame" x="0.0" y="64" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWc-lj-2ca">
+                                <rect key="frame" x="0.0" y="64" width="78.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -166,17 +161,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leK-MU-mPm">
+                                <rect key="frame" x="248" y="270" width="104.5" height="58.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="46"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jWc-lj-2ca" firstAttribute="top" secondItem="RLs-R5-Fqy" secondAttribute="bottom" id="7YP-20-yRK"/>
                             <constraint firstItem="Z1h-pr-Lrm" firstAttribute="centerX" secondItem="Srr-kQ-WDt" secondAttribute="centerX" id="Fsb-Cn-3EQ"/>
+                            <constraint firstItem="leK-MU-mPm" firstAttribute="centerY" secondItem="Srr-kQ-WDt" secondAttribute="centerY" id="Iyb-pf-LHu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ojF-eb-NaW" secondAttribute="trailing" constant="-20" id="Otk-hj-yaG"/>
                             <constraint firstItem="ojF-eb-NaW" firstAttribute="top" secondItem="RLs-R5-Fqy" secondAttribute="bottom" id="UBo-fz-rlj"/>
                             <constraint firstItem="leK-MU-mPm" firstAttribute="centerX" secondItem="Srr-kQ-WDt" secondAttribute="centerX" id="ZfM-1L-FFG"/>
+                            <constraint firstItem="leK-MU-mPm" firstAttribute="centerX" secondItem="Srr-kQ-WDt" secondAttribute="centerX" id="kB4-ZS-uR0"/>
                             <constraint firstItem="Z1h-pr-Lrm" firstAttribute="top" secondItem="leK-MU-mPm" secondAttribute="bottom" constant="139" id="mc7-T6-Mby"/>
                             <constraint firstItem="jWc-lj-2ca" firstAttribute="leading" secondItem="Srr-kQ-WDt" secondAttribute="leadingMargin" constant="-20" id="oAV-Xi-E1L"/>
-                            <constraint firstItem="leK-MU-mPm" firstAttribute="centerY" secondItem="Srr-kQ-WDt" secondAttribute="centerY" constant="-49.5" id="qmk-lb-ZJR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eKn-se-WmS"/>
@@ -212,7 +214,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oag-Fy-Boc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oag-Fy-Boc">
                                 <rect key="frame" x="0.0" y="187" width="600" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -220,16 +222,6 @@
                                     <outlet property="delegate" destination="0ur-z3-iec" id="0dU-PG-k3r"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-OM-iRn">
-                                <rect key="frame" x="226" y="158" width="149" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="OYD-Ud-ML8"/>
-                                    <constraint firstAttribute="width" constant="149" id="wMz-2I-8R7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMO-b0-r6j">
                                 <rect key="frame" x="7" y="77" width="328" height="21"/>
                                 <constraints>
@@ -246,7 +238,17 @@
                                     <constraint firstAttribute="height" constant="21" id="TN4-FS-axE"/>
                                     <constraint firstAttribute="width" constant="426" id="YfO-bS-qhS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-OM-iRn">
+                                <rect key="frame" x="202" y="158" width="196" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OYD-Ud-ML8"/>
+                                    <constraint firstAttribute="width" constant="196" id="wMz-2I-8R7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -316,37 +318,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-2s-pev">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-2s-pev">
                                 <rect key="frame" x="177" y="208" width="246" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="IEB-TW-1nm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-sI-3sb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-sI-3sb">
                                 <rect key="frame" x="177" y="319" width="246" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firebase URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-3v-7Ui">
-                                <rect key="frame" x="177" y="179" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-3v-7Ui">
+                                <rect key="frame" x="177" y="179" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MjC-ib-bbd"/>
+                                    <constraint firstAttribute="width" constant="144" id="zD5-gc-nfE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Name (Optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-5p-sef">
-                                <rect key="frame" x="97" y="290" width="180" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAp-ua-TIz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAp-ua-TIz">
                                 <rect key="frame" x="266" y="439" width="68" height="30"/>
                                 <state key="normal" title="Input URL"/>
                                 <connections>
                                     <action selector="InputClicked:" destination="Ta8-R7-SVC" eventType="touchUpInside" id="aOP-Lv-3Ey"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name (Optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-5p-sef">
+                                <rect key="frame" x="177" y="290" width="207" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="LK4-zH-dF4"/>
+                                    <constraint firstAttribute="height" constant="21" id="yhH-Qc-Stv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G4T-sI-3sb" firstAttribute="centerX" secondItem="zno-95-40U" secondAttribute="centerX" id="26q-yc-6e8"/>
+                            <constraint firstItem="bQo-2s-pev" firstAttribute="leading" secondItem="2YN-3v-7Ui" secondAttribute="leading" id="FfE-aE-SEw"/>
+                            <constraint firstItem="G4T-sI-3sb" firstAttribute="top" secondItem="ch3-5p-sef" secondAttribute="bottom" constant="8" id="HD3-du-5fh"/>
+                            <constraint firstItem="ch3-5p-sef" firstAttribute="top" secondItem="bQo-2s-pev" secondAttribute="bottom" constant="52" id="IOL-Dt-bMt"/>
+                            <constraint firstItem="bQo-2s-pev" firstAttribute="trailing" secondItem="G4T-sI-3sb" secondAttribute="trailing" id="WKP-4V-x9O"/>
+                            <constraint firstItem="ch3-5p-sef" firstAttribute="centerY" secondItem="zno-95-40U" secondAttribute="centerY" id="Yh2-iX-3Up"/>
+                            <constraint firstItem="RAp-ua-TIz" firstAttribute="centerX" secondItem="G4T-sI-3sb" secondAttribute="centerX" id="dQp-EU-Yag"/>
+                            <constraint firstItem="RAp-ua-TIz" firstAttribute="top" secondItem="G4T-sI-3sb" secondAttribute="bottom" constant="90" id="ho7-s6-lTt"/>
+                            <constraint firstItem="bQo-2s-pev" firstAttribute="top" secondItem="2YN-3v-7Ui" secondAttribute="bottom" constant="8" symbolic="YES" id="p4z-pR-SUZ"/>
+                            <constraint firstItem="G4T-sI-3sb" firstAttribute="leading" secondItem="ch3-5p-sef" secondAttribute="leading" id="rBE-IU-E3A"/>
+                            <constraint firstItem="ch3-5p-sef" firstAttribute="leading" secondItem="bQo-2s-pev" secondAttribute="leading" id="w4d-12-DeV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="GameName" destination="G4T-sI-3sb" id="HkC-tD-7qR"/>
@@ -423,36 +449,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-j2-2bn">
-                                <rect key="frame" x="284" y="289" width="33" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-j2-2bn">
+                                <rect key="frame" x="248" y="271" width="104.5" height="58.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="46"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-m1-qKe">
-                                <rect key="frame" x="0.0" y="64" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-m1-qKe">
+                                <rect key="frame" x="0.0" y="64" width="78.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-Hv-oX8">
-                                <rect key="frame" x="274" y="408" width="52" height="30"/>
+                                <rect key="frame" x="233" y="360.5" width="134" height="77.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hVt-Hv-oX8" secondAttribute="height" multiplier="26:15" id="JP0-9n-qHD"/>
-                                    <constraint firstAttribute="width" constant="52" id="KIE-L3-v8P"/>
-                                    <constraint firstAttribute="height" constant="30" id="oOp-lT-1Uk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="hAQ-kS-pnS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="sOJ-Zv-pEI"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                 <state key="normal" title="Correct"/>
                                 <connections>
                                     <action selector="CorrectClicked:" destination="bRR-6z-Nft" eventType="touchUpInside" id="tII-1m-P8I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-vj-ZEo">
-                                <rect key="frame" x="269" y="473" width="62" height="30"/>
+                                <rect key="frame" x="233" y="473" width="135" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="eCe-qe-Myf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="OLW-fu-31J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Tkm-Tx-QRT"/>
                                     <constraint firstAttribute="height" constant="30" id="ndf-Fj-lDh"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                 <state key="normal" title="Incorrect"/>
                                 <connections>
                                     <action selector="IncorrectClicked:" destination="bRR-6z-Nft" eventType="touchUpInside" id="KmU-Su-4eF"/>
